@@ -24,9 +24,9 @@ function goBack() {
 
 function checkIfAdmin(){
     if(adminPanel.dataset.checkIfAdmin == 'Admin'){
-        adminPanel.style.display = "block"
+        adminPanel.style.display = "block";
     }else{
-        adminPanel.style.display = "none"
+        adminPanel.style.display = "none";
     }
 }
 
