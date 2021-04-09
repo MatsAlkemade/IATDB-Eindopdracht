@@ -5,20 +5,22 @@
 @endsection
 
 @section('content')
-    <main>
-        <section>
-            <figure>
-                <img src="{{$user->profile_picture}}" alt="{{$user->name}}">
-            </figure>
-            <p>{{$user->name}}</p>
-            <p>{{$user->email}}</p>
-            <p>{{$user->phone_number}}</p>
-            <p>{{$user->description}}</p>
+    <section class="profile">
+        <section class="sitterShow__card">
+            <section class="sitterShow__card__title">
+                <h2>{{$user->name}}</h2>
+            </section>
+            <section class="sitterShow__card__section">
+                <figure class="sitterShow__card__section__figure">
+                    <img src="{{$user->profile_picture}}" alt="{{$user->name}}">
+                </figure>
+                <p class="sitterShow__card__section__text">{{$user->email}}</p>
+                <p class="sitterShow__card__section__text">{{$user->phone_number}}</p>
+                <p class="sitterShow__card__section__text">{{$user->description}}</p>
+            </section>
+            <a href="/profile/edit" class="u-button">Profiel aanpassen</a>
         </section>
-        <section>
-            <a href="/profile/edit"><button>Profiel aanpassen</button></a>
-        </section>
-        <section>
+        <section class="profile__section">
             @if ($errors->any())
                 <section class="alert alert-danger">
                     <ul>
@@ -30,16 +32,16 @@
             @endif
             @if($user->role == 'Owner')
                 <h2>Huisdieren</h2>
-                <ul>
+                <ul class="profile__section__pets">
                     @foreach($pets as $pet)
                         @include('pets.components.petCard--index')
                     @endforeach
                 </ul>
             @else
                 <h2>Foto's</h2>
-                <ul>
+                <ul class="profile__section__images">
                     @foreach($images as $image)
-                        <li>
+                        <li class="profile__section__images__item">
                             <section>
                                 <figure>
                                     <img src="{{$image->image}}" alt="Foto">
@@ -53,15 +55,13 @@
                             </section>
                         </li>
                     @endforeach
-                    <li>
-                        <form action="/images/create" method="post" enctype="multipart/form-data">
-                            @csrf
-                            <input type="file" name="image" id="image" accept="image/*" required />
-                            <button type="submit">Voeg foto toe</button>
-                        </form>
-                    </li>
                 </ul>
+                <form action="/images/create" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <input type="file" name="image" id="image" accept="image/*" required />
+                    <button type="submit">Voeg foto toe</button>
+                </form>
             @endif
         </section>
-    </main>
+    </section>
 @endsection

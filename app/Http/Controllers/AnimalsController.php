@@ -23,7 +23,9 @@ class AnimalsController extends Controller
     }
 
     public function create(){
-        return view('pets.create');
+        return view('pets.create',[
+            'user' => Auth::user(),
+        ]);
     }
 
     public function store(Request $request, \App\Models\Animal $pet){

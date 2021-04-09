@@ -7,13 +7,13 @@
 @section('content')
     <main class="home">
         <section class="home__addPet">
-            <a href="/pets/create"><button class="u-button">Bied je dier aan</button></a>
+            <a href="/pets/create" class="u-button">Bied je dier aan</a>
         </section>
         <article class="home__main">
             <section class="home__main__pets">
                 <h2>Huisdieren</h2>
                 <ul class="home__main__pets__list">
-                    <li class="petCard">
+                    <li class="petCard u-remove-two-pets">
                         <a href="/pets/{{$pets[0]->id}}">                            
                             <section class="petCard__title">
                                 <h3>{{$pets[0]->animal}} - {{$pets[0]->name}}</h3>
@@ -28,7 +28,7 @@
                             </section>
                         </a>
                     </li>
-                    <li class="petCard">
+                    <li class="petCard u-remove-two-pets">
                         <a href="/pets/{{$pets[1]->id}}">
                             <section class="petCard__title">
                                 <h3>{{$pets[1]->animal}} - {{$pets[1]->name}}</h3>
@@ -43,7 +43,7 @@
                             </section>
                         </a>
                     </li>
-                    <li class="petCard">
+                    <li class="petCard u-remove-two-pets">
                         <a href="/pets/{{$pets[2]->id}}">
                             <section class="petCard__title">
                                 <h3>{{$pets[2]->animal}} - {{$pets[2]->name}}</h3>
@@ -58,7 +58,7 @@
                             </section>
                         </a>
                     </li>
-                    <li class="petCard">
+                    <li class="petCard u-remove-two-pets">
                         <a href="/pets/{{$pets[3]->id}}">
                             <section class="petCard__title">
                                 <h3>{{$pets[3]->animal}} - {{$pets[3]->name}}</h3>
@@ -74,12 +74,12 @@
                         </a>
                     </li>
                 </ul>
-                <a href="/pets"><button class="u-button">Zie alle</button></a>
+                <a href="/pets" class="u-button">Zie alle</a>
             </section>
             <section class="home__main__sitters">
                 <h2>Oppassers</h2>
                 <ul class="home__main__sitters__list">
-                    <li class="sitterCard">
+                    <li class="sitterCard u-remove-two-sitters">
                         <a href="/sitters/{{$sitters[0]->id}}">
                             <section class="sitterCard__title">
                                 <h3>{{$sitters[0]->name}}</h3>
@@ -92,7 +92,7 @@
                             </section>
                         </a>
                     </li>
-                    <li class="sitterCard">
+                    <li class="sitterCard u-remove-two-sitters">
                         <a href="/sitters/{{$sitters[0]->id}}">
                             <section class="sitterCard__title">
                                 <h3>{{$sitters[1]->name}}</h3>
@@ -105,7 +105,7 @@
                             </section>
                         </a>
                     </li>
-                    <li class="sitterCard">
+                    <li class="sitterCard u-remove-two-sitters">
                         <a href="/sitters/{{$sitters[2]->id}}">
                             <section class="sitterCard__title">
                                 <h3>{{$sitters[2]->name}}</h3>
@@ -118,7 +118,7 @@
                             </section>
                         </a>
                     </li>
-                    <li class="sitterCard">
+                    <li class="sitterCard u-remove-two-sitters">
                         <a href="/sitters/{{$sitters[3]->id}}">
                             <section class="sitterCard__title">
                                 <h3>{{$sitters[3]->name}}</h3>
@@ -132,7 +132,7 @@
                         </a>
                     </li>
                 </ul>
-                <a href="/sitters"><button class="u-button">Zie alle</button></a>
+                <a href="/sitters" class="u-button">Zie alle</a>
             </section>
         </article>
     </main>

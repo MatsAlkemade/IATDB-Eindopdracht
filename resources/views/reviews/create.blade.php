@@ -5,25 +5,25 @@
 @endsection
 
 @section('content')
-    <main>
+    <section class="review">
         <h2>Review achterlaten voor {{$reviewed->name}}</h2>
-        <form action="/reviews/create" method="post">
+        <form action="/reviews/create" method="post" class="review__form">
             @csrf
             <input type="hidden" name="user_id" id="user_id" value="{{$reviewed->id}}">
-            <section>
+            <section  class="review__form__input">
                 <label for="name">Naam:</label>
                 <input type="text" name="name" id="name">
                 <p>Leeg laten om anoniem te blijven</p>
             </section>
-            <section>
+            <section  class="review__form__input">
                 <label for="title">Titel:</label>
                 <input type="text" name="title" id="title">
             </section>
-            <section>
-                <label for="description">Bericht:</label>
-                <textarea type="text" name="description" id="description" placeholder="Typ hier..."></textarea>
+            <section  class="review__form__input">
+                <label for="description" class="u-label-vert-align-top">Bericht:</label>
+                <textarea name="description" id="description" placeholder="Typ hier..."></textarea>
             </section>
-            <section>
+            <section  class="review__form__input">
                 <label for="rating">Beoordeling</label>
                 <select name="rating" id="rating">
                     <option value="5">5</option>
@@ -33,9 +33,9 @@
                     <option value="1">1</option>
                 </select>
             </section>
-            <section>
-                <button type="submit">Versturen</button>
+            <section  class="review__form__input">
+                <button type="submit" class="u-button">Versturen</button>
             </section>
         </form>
-    </main>
+    </section>
 @endsection

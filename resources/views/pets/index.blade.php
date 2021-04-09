@@ -8,7 +8,7 @@
     <section class="pets">
         <h2>Huisdieren</h2>
         <section class="pets__addButton">
-            <a href="/pets/create"><button>Bied je dier aan</button></a>
+            <a href="/pets/create" class="u-button">Bied je dier aan</a>
         </section>
         <section class="pets__section">
             <section class="pets__section__filter">

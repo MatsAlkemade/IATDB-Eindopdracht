@@ -44,8 +44,8 @@
                 </select>
             </section>
             <section class="register__form__input">
-                <label for="description">Vertel wat over jezelf: </label>
-                <textarea type="text" name="description" id="description" placeholder="Typ hier..."></textarea>
+                <label for="description" class="u-label-vert-align-top">Vertel wat over jezelf: </label>
+                <textarea name="description" id="description" placeholder="Typ hier..."></textarea>
             </section>
             <section class="register__form__button">
                 <button type="submit" class="u-button">Registreer</button>
