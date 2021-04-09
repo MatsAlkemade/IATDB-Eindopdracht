@@ -48,7 +48,7 @@
                 <textarea type="text" name="description" id="description" placeholder="Typ hier..."></textarea>
             </section>
             <section class="register__form__button">
-                <button type="submit">Registreer</button>
+                <button type="submit" class="u-button">Registreer</button>
             </section>
         </form>
     </main>
